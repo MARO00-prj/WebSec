@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function getUserRole() {
+      // NOTE: For local testing without custom claims, checking user document.
+      // In production, checking custom claims `request.auth.token.role` is preferred.
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+    }
+
+    match /users/{userId} {
+      // Any authenticated user can read user profiles (needed for delegations etc)
+      allow read: if isAuthenticated();
+      // Only Admin or the user themselves can update their profile (e.g. adding delegation)
+      allow write: if isAuthenticated() && (request.auth.uid == userId || getUserRole() == 'admin');
+    }
+
+    match /rooms/{roomId} {
+      allow read: if isAuthenticated();
+      // Only Admins can modify physical room assets
+      allow write: if isAuthenticated() && getUserRole() == 'admin';
+    }
+
+    match /bookings/{bookingId} {
+      allow read: if isAuthenticated() && (
+        request.auth.uid == resource.data.userId || 
+        getUserRole() in ['admin', 'manager', 'secretary']
+      );
+      
+      // Employees and Secretary can create. The exact 24/48h constraints will ideally be validated via Cloud Functions or Frontend.
+      allow create: if isAuthenticated();
+      
+      // Admin and Manager can approve/reject updates.
+      allow update: if isAuthenticated() && getUserRole() in ['admin', 'manager'];
+      
+      // Admin or the creator can delete/cancel a booking.
+      allow delete: if isAuthenticated() && (
+        request.auth.uid == resource.data.userId || getUserRole() == 'admin'
+      );
+    }
+
+    match /settings/{settingId} {
+      allow read: if isAuthenticated();
+      // Admin only configurations like dynamic slot times
+      allow write: if isAuthenticated() && getUserRole() == 'admin';
+    }
+  }
+}
