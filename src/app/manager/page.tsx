@@ -39,7 +39,7 @@ export default function ManagerDashboard() {
       const snap = await getDocs(q);
       const fetched = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       // Sort by creation date (highest priority)
-      fetched.sort((a, b) => (b.createdAt?.toMillis() || 0) - (a.createdAt?.toMillis() || 0));
+      fetched.sort((a, b) => (b.createdAt?.toMillis() || 0) - (a.createdAt?.toMillis() || 0) || (b.id.toMillis() || 0) - (a.createdAt?.toMillis() || 0));
       setPendingBookings(fetched);
     } catch (err) {
       console.error("Failed to fetch bookings", err);

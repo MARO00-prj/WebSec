@@ -1,15 +1,99 @@
-[debug] [2026-04-17T16:08:41.103Z] ----------------------------------------------------------------------
-[debug] [2026-04-17T16:08:41.108Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/gm9mcvzb17vv8cla08khrg29vxn3sq4r-firebase-tools-15.1.0/lib/node_modules/firebase-tools/lib/bin/firebase.js login --no-localhost
-[debug] [2026-04-17T16:08:41.109Z] CLI Version:   15.1.0
-[debug] [2026-04-17T16:08:41.109Z] Platform:      linux
-[debug] [2026-04-17T16:08:41.109Z] Node Version:  v20.19.1
-[debug] [2026-04-17T16:08:41.109Z] Time:          Fri Apr 17 2026 16:08:41 GMT+0000 (Coordinated Universal Time)
-[debug] [2026-04-17T16:08:41.110Z] ----------------------------------------------------------------------
+[debug] [2026-04-17T17:08:13.794Z] ----------------------------------------------------------------------
+[debug] [2026-04-17T17:08:13.796Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/gm9mcvzb17vv8cla08khrg29vxn3sq4r-firebase-tools-15.1.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --only hosting
+[debug] [2026-04-17T17:08:13.797Z] CLI Version:   15.1.0
+[debug] [2026-04-17T17:08:13.797Z] Platform:      linux
+[debug] [2026-04-17T17:08:13.797Z] Node Version:  v20.19.1
+[debug] [2026-04-17T17:08:13.797Z] Time:          Fri Apr 17 2026 17:08:13 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-04-17T17:08:13.797Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2026-04-17T16:08:41.115Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2026-04-17T16:08:41.195Z] No OAuth tokens found
-[debug] [2026-04-17T16:08:41.196Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:16.631Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:16.632Z] No OAuth tokens found
 [error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
-[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
-[debug] [2026-04-17T16:08:41.477Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2026-04-17T16:08:41.478Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-04-17T17:08:16.642Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-04-17T17:08:16.643Z] > authorizing via signed-in user (zahraaabozead@gmail.com)
+[debug] [2026-04-17T17:08:16.643Z] [iam] checking project websec-9266e for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-04-17T17:08:16.644Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:16.644Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:16.644Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-04-17T17:08:16.645Z] > authorizing via signed-in user (zahraaabozead@gmail.com)
+[debug] [2026-04-17T17:08:16.647Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/websec-9266e:testIamPermissions [none]
+[debug] [2026-04-17T17:08:16.647Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/websec-9266e:testIamPermissions x-goog-quota-user=projects/websec-9266e
+[debug] [2026-04-17T17:08:16.648Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/websec-9266e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-04-17T17:08:16.871Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/websec-9266e:testIamPermissions 200
+[debug] [2026-04-17T17:08:16.872Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/websec-9266e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-04-17T17:08:16.873Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:16.873Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:16.873Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-04-17T17:08:16.874Z] > authorizing via signed-in user (zahraaabozead@gmail.com)
+[debug] [2026-04-17T17:08:16.874Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/websec-9266e [none]
+[debug] [2026-04-17T17:08:17.098Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/websec-9266e 200
+[debug] [2026-04-17T17:08:17.098Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/websec-9266e {"projectId":"websec-9266e","projectNumber":"3618526389","displayName":"Websec","name":"projects/websec-9266e","resources":{"hostingSite":"websec-9266e"},"state":"ACTIVE","etag":"1_b5e7d942-509b-490d-a29b-b53e4369a76d"}
+[debug] [2026-04-17T17:08:18.883Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:18.884Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:18.884Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-04-17T17:08:18.885Z] > authorizing via signed-in user (zahraaabozead@gmail.com)
+[debug] [2026-04-17T17:08:18.886Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites pageToken=&pageSize=10
+[debug] [2026-04-17T17:08:19.826Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites 200
+[debug] [2026-04-17T17:08:19.827Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites {"sites":[{"name":"projects/websec-9266e/sites/websec-9266e","defaultUrl":"https://websec-9266e.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2026-04-17T17:08:19.829Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:19.830Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:19.830Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-04-17T17:08:19.830Z] > authorizing via signed-in user (zahraaabozead@gmail.com)
+[debug] [2026-04-17T17:08:19.830Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites 
+[debug] [2026-04-17T17:08:20.775Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites 200
+[debug] [2026-04-17T17:08:20.776Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites {"sites":[{"name":"projects/websec-9266e/sites/websec-9266e","defaultUrl":"https://websec-9266e.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2026-04-17T17:08:20.776Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:20.777Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:20.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-04-17T17:08:20.778Z] > authorizing via signed-in user (zahraaabozead@gmail.com)
+[debug] [2026-04-17T17:08:20.778Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/websec-9266e/webApps/-/config [none]
+[debug] [2026-04-17T17:08:21.238Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/websec-9266e/webApps/-/config 200
+[debug] [2026-04-17T17:08:21.241Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/websec-9266e/webApps/-/config {"projectId":"websec-9266e","appId":"1:3618526389:web:13407a68c7df30dbd45afc","storageBucket":"websec-9266e.firebasestorage.app","apiKey":"AIzaSyDnfjaoTsTfA0m2MkOz6OfepT73uSuKQzo","authDomain":"websec-9266e.firebaseapp.com","messagingSenderId":"3618526389","measurementId":"G-13R3MNMXKB","projectNumber":"3618526389","version":"2"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2026-04-17T17:08:26.460Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:26.461Z] No OAuth tokens found
+[debug] [2026-04-17T17:08:26.461Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-04-17T17:08:26.461Z] > authorizing via signed-in user (zahraaabozead@gmail.com)
+[debug] [2026-04-17T17:08:26.465Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites/websec-9266e [none]
+[debug] [2026-04-17T17:08:27.139Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites/websec-9266e 200
+[debug] [2026-04-17T17:08:27.139Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/websec-9266e/sites/websec-9266e {"name":"projects/websec-9266e/sites/websec-9266e","defaultUrl":"https://websec-9266e.web.app","type":"DEFAULT_SITE"}
+[info] ▲ Next.js 16.2.4 (Turbopack)
+
+[info] - Environments: .env.local, .env
+
+
+[info]   Creating an optimized production build ...
+
+[info] ✓ Compiled successfully in 27.1s
+
+[info]   Running TypeScript ...
+
+[info] Failed to type check.
+
+
+[info] ./src/app/manager/page.tsx:42:33
+Type error: Property 'createdAt' does not exist on type '{ id: string; }'.
+
+  40 |       const fetched = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  41 |       // Sort by creation date (highest priority)
+> 42 |       fetched.sort((a, b) => (b.createdAt?.toMillis() || 0) - (a.createdAt?.toMillis() || ...
+     |                                 ^
+  43 |       setPendingBookings(fetched);
+  44 |     } catch (err) {
+  45 |       console.error("Failed to fetch bookings", err);
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2026-04-17T17:09:11.354Z] Error: ENOENT: no such file or directory, open '/home/user/WebSec/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

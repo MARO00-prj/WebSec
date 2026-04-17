@@ -1,4 +1,6 @@
 {
-  "firebase_hosting": {},
+  "firebase_hosting": {
+    "deploymentHostingUrl": "https://websec-9266e.web.app"
+  },
   "gemini_api": {}
 }
